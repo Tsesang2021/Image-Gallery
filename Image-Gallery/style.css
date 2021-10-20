@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas: "title title" "img img" "btn1 btn2";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+img {
+  display: block;
+  grid-area: img;
+  width: 100%;
+  object-fit: contain;
+  height: 50vh;
+}
+
+h1 {
+  grid-area: title;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  justify-self: center;
+  font-size: 1.6rem;
+  grid-area: btn1;
+  margin-top: 2rem;
+}
+
+button:last-of-type {
+  grid-area: btn2;
+}
